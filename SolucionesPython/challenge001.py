@@ -1,13 +1,14 @@
-"""
- * Reto #0
- * EL FAMOSO "FIZZ BUZZ"
- * Fecha publicación enunciado: 27/12/21
- * Fecha publicación resolución: 03/01/22
- * Dificultad: FÁCIL
- * Enunciado: Escribe un programa que muestre por consola (con un print) los números de 1 a 100 (ambos incluidos y con un salto de línea entre cada impresión), sustituyendo los siguientes:
- * - Múltiplos de 3 por la palabra "fizz".
- * - Múltiplos de 5 por la palabra "buzz".
- * - Múltiplos de 3 y de 5 a la vez por la palabra "fizzbuzz".
+"""""
+ * Reto #1
+ * ¿ES UN ANAGRAMA?
+ * Fecha publicación enunciado: 03/01/22
+ * Fecha publicación resolución: 10/01/22
+ * Dificultad: MEDIA
+ *
+ * Enunciado: Escribe una función que reciba dos palabras (String) y retorne verdadero o falso (Boolean) según sean o no anagramas.
+ * Un Anagrama consiste en formar una palabra reordenando TODAS las letras de otra palabra inicial.
+ * NO hace falta comprobar que ambas palabras existan.
+ * Dos palabras exactamente iguales no son anagrama.
  *
  * Información adicional:
  * - Usa el canal de nuestro discord (https://mouredev.com/discord) "🔁reto-semanal" para preguntas, dudas o prestar ayuda a la acomunidad.
@@ -15,19 +16,29 @@
  * - Revisaré el ejercicio en directo desde Twitch el lunes siguiente al de su publicación.
  * - Subiré una posible solución al ejercicio el lunes siguiente al de su publicación.
  *
- """
+"""
+
+def checkAnagrams(word1,word2):
+    word1_or = sorted(word1.lower())
+    word2_or = sorted(word2.lower())
+
+    if (word1_or == word2_or):
+        return True
+    else:
+        return False
+
 
 def run():
-    for i in range(1,101):
-        if (i%3 == 0 and i%5 == 0):
-            print("fizzbuzz")
-        elif i%3 == 0:
-            print("fizz")
-        elif i%5 == 0:
-            print("buzz")
-        else:
-            print(str(i))
+    word1 = input("Ingresa la primer palabra: ")
+    word2 = input("Ingresa la segunda palabra: ")
+    print("-------------------------------------")
+    print("Iniciando comprobacion si las dos palabras son anagrmas")
+    if (checkAnagrams(word1,word2)):
+        print("Las palabras SI son un anagrama")
+    else:
+        print("Las palabras NO son un anagrama")
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     run()
+    
