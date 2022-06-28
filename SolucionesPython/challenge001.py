@@ -32,8 +32,10 @@ def run():
     word1 = input("Ingresa la primer palabra: ")
     word2 = input("Ingresa la segunda palabra: ")
     print("-------------------------------------")
-    print("Iniciando comprobacion si las dos palabras son anagrmas")
-    if (checkAnagrams(word1,word2)):
+    print("Iniciando comprobacion si las dos palabras son anagramas")
+    if (word1 == word2):
+        print("NO se aceptan dos palabras iguales")
+    elif (checkAnagrams(word1,word2)):
         print("Las palabras SI son un anagrama")
     else:
         print("Las palabras NO son un anagrama")
