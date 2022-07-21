@@ -16,19 +16,20 @@
  * - Subiré una posible solución al ejercicio el lunes siguiente al de su publicación.
  *
 """
+def run():
+    count = 2
+    n1 = 0
+    n2 = 1
 
-count = 2
-n1 = 0
-n2 = 1
+    print(n1)
+    print(n2)
 
-print(n1)
-print(n2)
+    while (count < 50):
+        n = n1 + n2
+        n1 = n2
+        n2 = n
+        count+=1
+        print(n)
 
-while (count < 50):
-    n = n1 + n2
-    n1 = n2
-    n2 = n
-    count+=1
-    print(n)
-
-
+if __name__ == '__main__':
+    run()
