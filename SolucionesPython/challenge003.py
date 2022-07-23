@@ -18,14 +18,14 @@
 def printPrimeNumbers(n):
     if (n==2 or n ==3 or n == 5 or n == 7):
         return True
-    elif (n%2 == 0 or n%3 == 0 or n%5 == 0 or n%7 == 0):
+    elif (n%2 == 0 or n%3 == 0 or n%5 == 0 or n%7 == 0 or n == 1):
         return False
     else:
         return True
     
 
 def run():
-    for i in range(2,100):
+    for i in range(1,100):
         if (printPrimeNumbers(i)):
             print(i)
         else:
