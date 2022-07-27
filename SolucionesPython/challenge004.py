@@ -22,7 +22,12 @@ def polygonArea(polygon,a,b):
     """
     Description: Function in charge of calculating the area of three polygons (Triangle, Rectangle and Square)
     Inputs: 
-        polygon: 
+        polygon: string - Polygon's name 
+        a: float/double - Number that indicating the hight or a side of the polygon
+        b: float/double - Number that indicating the base or side of the polygon 
+    Outputs:
+        area: float/double - Number that shows the polygon's area
+        message: string - Message that indicating the polygon's name and its area according with a and b
     """
     pol_area = {
         "Triangle" : a*b/2,
